@@ -34,7 +34,7 @@ describe('enemy', () => {
       expect(enemy.dialogue).toBe(config.dialogue);
     });
     it('has a damage rating', () => {
-      expect(enemy.damage).toBe(config.damage);
+      expect(enemy.damage).toBe(enemy.baseAttack + enemy.level);
     });
   });
   describe('attack', () => {
@@ -43,7 +43,7 @@ describe('enemy', () => {
       expect(victim.health).toBe(victim.maxHealth - enemy.damage);
     });
     it('can describe its attack', () => {
-      const attackLine = `${enemy.name} lets out a ${enemy.dialogue}, and hits ${victim.name} for ${config.damage} damage!`;
+      const attackLine = `${enemy.name} lets out a ${enemy.dialogue}, and hits ${victim.name} for ${enemy.baseAttack + enemy.level} damage!`;
       expect(enemy.attack(victim)).toBe(attackLine);
     });
   });

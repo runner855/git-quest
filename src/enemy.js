@@ -1,9 +1,9 @@
 /* eslint-disable func-names */
-const Character = require('./character');
+const Character = require('../src/character.js');
 
 function Enemy(config) {
   Character.call(this, config);
-  this.damage = config.damage;
+  this.damage = this.attackTotal;
 }
 
 Enemy.prototype = Object.create(Character.prototype);
