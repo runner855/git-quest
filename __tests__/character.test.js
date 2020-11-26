@@ -35,9 +35,14 @@ describe("character", () => {
     it("has baseAttack", () => {
       expect(character.baseAttack).toBe(0);
     });
-    it("has baseDefence", () => {
-      expect(character.baseDefence).toBe(0);
+    it("defence Total", () => {
+      expect(character.defenceTotal).toBe(1);
     });
+    it("attack total", () => {
+      expect(character.attackTotal).toBe(1);
+    });
+
+
   });
   describe("speak", () => {
     it("returns its dialogue", () => {
