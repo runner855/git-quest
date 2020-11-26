@@ -32,6 +32,12 @@ describe("character", () => {
     it("has dialogue", () => {
       expect(character.dialogue).toBe(config.dialogue);
     });
+    it("has baseAttack", () => {
+      expect(character.baseAttack).toBe(0);
+    });
+    it("has baseDefence", () => {
+      expect(character.baseDefence).toBe(0);
+    });
   });
   describe("speak", () => {
     it("returns its dialogue", () => {
